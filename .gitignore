@@ -11,3 +11,7 @@ web-build/
 
 # macOS
 .DS_Store
+
+# temp
+screens/ChatScreen2.js
+screens/ChatScreen3.js
