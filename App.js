@@ -10,9 +10,9 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" mode="modal">
+      <Stack.Navigator  mode="modal">
       <Stack.Screen name="Chat Screen" component={ChatScreen} />
-      <Stack.Screen name="Login Screen" component={LoginScreen} />
+      <Stack.Screen options={{ headerShown: false }} name="Login Screen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

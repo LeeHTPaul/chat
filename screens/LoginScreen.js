@@ -11,23 +11,19 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 export default function LoginScreen({navigation}) {
-    //const text1 = route.params.item.title;
-    //const id = route.params.item.id;
-    //let countUs = 0;
-    //console.log("Inside updatescreen=", {route}, route.params.item, "count=", countUs++);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorText, setErrorText] = useState("");
 
     function login() {
-        console.log("login funct");
+        console.log("login");
         Keyboard.dismiss();
         auth
         .signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             console.log("Signed in!");
-            navigation.navigate("Chat Screen", {email});
+            navigation.navigate("Chat Screen");
         })
         .catch((error) => {
             console.log("Error!");
